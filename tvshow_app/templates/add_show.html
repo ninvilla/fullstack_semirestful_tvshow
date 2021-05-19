@@ -8,6 +8,16 @@
     <title>Add New Show</title>
 </head>
 <body>
+    {% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+        {{message}}
+        <br>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
     <a href="/shows">Go Back</a>
     <h1>Add a New Show</h1>
     <form action="/shows/create" method="POST">
